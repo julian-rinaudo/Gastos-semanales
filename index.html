@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"crossorigin="anonymous"></script>
     <!-- Boostrap -->
     <link rel="stylesheet" href="/css/style.css">
     <script defer src="/js/script.js"></script>
@@ -18,29 +19,41 @@
             <h1>Escriba Aqui Su Presupuesto</h1>
             <form id="formulario-pregunta" action="">
                 <input class="p-2" type="text" placeholder="Ej: 100">
-                <button id="btnAdd" class="mt-4 w-100" type="submit">Agregar</button>
+                <button id="btnAdd" class="mt-4 w-100 agregar" type="submit">Agregar</button>
             </form>
         </div>
         <div id="presupuesto" class="container d-flex flex-wrap text-center p-5 row bg-white d-none scale-in-center presupuesto">
             <div class="col ">
                 <h2>Añade tus gastos aqui</h1>
-                 <form action="" class="d-flex flex-column">
+                 <form id="formulario-gastos" action="" class="d-flex flex-column">
                     <label class="d-flex flex-start mb-2" for="gasto">Gastos:</label>
                     <input class="mb-2 p-1" type="text" id="gasto" placeholder="Ingrese Gasto">
                     <label class="d-flex flex-start mb-2" for="cantidad">Cantidad:</label>
                     <input class="mb-2 p-1" type="text" id="cantidad" placeholder="Cantidad en $">
-                    <button class="mt-3" type="submit">Agregar</button>
+                    <button class="mt-3 agregar" type="submit">Agregar</button>
                  </form>   
             </div>
             <div class="col ">
                 <h2>Listado</h2>
-                <ul></ul>
+                <!-- <ul id="listado" class="list-unstyled"></ul> -->
+                <table class="w-100">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Monto</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                    
+                </table>
+                
                 <div class="je">
                     <div class="alert alert-primary d-flex flex-start p-2">
-                        <p>Presupuesto: $ <span></span></p>
+                        <p>Presupuesto: $ <span id="spanPresupuesto"></span></p>
                     </div>
                     <div class="alert alert-danger d-flex flex-start p-2">
-                        <p>Restante: $ <span></span></p>
+                        <p>Restante: $ <span id="spanRestante"></span></p>
                     </div>
                 </div>
             </div>

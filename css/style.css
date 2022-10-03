@@ -23,7 +23,7 @@ h2{
 label{
     font-weight: bold;
 }
-button{
+.agregar{
     width: 80px;
     padding: 5px;
     border-radius: 10px;
@@ -31,10 +31,23 @@ button{
     background-color: rgb(98, 111, 228);
     color: white;
 }
+.price{
+    font-weight: bold;
+    height: 25px;
+    border-radius: 10px;
+}
+.btnDelete{
+    color: red;
+    font-size: 20px;
+    opacity: 0.8;
+}
+.btnDelete:hover{
+    cursor: pointer;
+    opacity: 1;
+}
 .je {
     margin-top: 40px;
 }
-
 .scale-in-center {
 	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
