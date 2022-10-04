@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="d-flex justify-content-center align-items-center contenedor">
-        <div id="preguntarPresupuesto" class="container rounded w-50 d-flex flex-wrap text-center p-5 row bg-white">
+        <div id="preguntarPresupuesto" class="container rounded w-50 d-flex flex-wrap text-center p-5 row bg-white ">
             <h1>Escriba Aqui Su Presupuesto</h1>
             <form id="formulario-pregunta" action="">
                 <input class="p-2" type="text" placeholder="Ej: 100">
@@ -23,7 +23,7 @@
             </form>
         </div>
         <div id="presupuesto" class="container d-flex flex-wrap text-center p-5 row bg-white d-none scale-in-center presupuesto">
-            <div class="col ">
+            <div class="col" id="divGastos">
                 <h2>Añade tus gastos aqui</h1>
                  <form id="formulario-gastos" action="" class="d-flex flex-column">
                     <label class="d-flex flex-start mb-2" for="gasto">Gastos:</label>
@@ -52,7 +52,7 @@
                     <div class="alert alert-primary d-flex flex-start p-2">
                         <p>Presupuesto: $ <span id="spanPresupuesto"></span></p>
                     </div>
-                    <div class="alert alert-danger d-flex flex-start p-2">
+                    <div class="alert alert-success d-flex flex-start p-2">
                         <p>Restante: $ <span id="spanRestante"></span></p>
                     </div>
                 </div>
