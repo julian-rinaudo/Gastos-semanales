@@ -64,9 +64,12 @@ const ingresarGastos = e => {
 const eliminarGasto = e => {
     if (e.target.classList.contains("btnDelete")) {
         e.target.parentElement.parentElement.parentElement.removeChild(e.target.parentElement.parentElement)
+        
     }
     const btnId = Number(e.target.parentElement.parentElement.id)
-     gastosSemanales = gastosSemanales.filter(gastos => gastos.id !== btnId)
+    gastosSemanales = gastosSemanales.filter(gastos => gastos.id !== btnId)
+    
+    actualizarRestante();
     
 }
 
@@ -77,7 +80,18 @@ const actualizarRestante = () => {
     const presupuestoActualizado = presupuesto - restante
     
     ui.imprimirPresupuestoActulizado(presupuestoActualizado);
+
+     if (presupuestoActualizado < presupuesto / 4) {
+        spanRemaining.parentElement.parentElement.classList.toggle("alert-danger");
+    }else if (presupuestoActualizado < presupuesto / 2) {
+        spanRemaining.parentElement.parentElement.classList.toggle("alert-warning");
+    }else {
+        spanRemaining.parentElement.parentElement.classList.remove("alert-danger", "alert-warning");
+        
+     }
+    
 }
+
 
  
 
